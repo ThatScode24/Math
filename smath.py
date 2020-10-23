@@ -33,3 +33,99 @@ def quadr(a, b, c):
 
 
 
+def spl(root):
+
+    foundSolution = False
+    
+    if root % 2 == 0:
+        
+        r = root / 2
+        s= sqrt(r)
+
+        items = str(s).split(".")
+
+        if float(items[1]) > 2:
+            pass
+        else:
+            print(str("{}√2 ".format(int(s))))
+            foundSolution = True
+
+    if root % 3 == 0:        
+        
+        r = root / 3
+        s = sqrt(r)
+        
+        items = str(s).split(".")
+        
+        if float(items[1]) > 2:
+            pass
+        else:
+            print(str("{}√3 ".format(int(s))))
+            foundSolution = True
+        
+    if root % 4 == 0:
+        
+        r = root / 4
+        s = sqrt(r)
+
+        items = str(s).split(".")
+
+        if float(items[1]) > 2:
+            pass
+
+        if root == 16:
+            print(str(4))
+            foundSolution = True
+            pass
+        else:
+            if foundSolution == True:
+                pass
+            else:
+                print(str("{}√4".format(int(s))))
+                foundSolution = True
+
+    if root % 5 == 0:
+
+        r = root / 5
+        s = sqrt(r)
+
+        items = str(s).split(".")
+
+        if float(items[1]) > 2:
+            pass
+
+        if root == 25:
+            print(str(5))
+            foundSolution = True
+            pass
+        else:
+            if foundSolution == True:
+                pass
+            else:
+                print(str("{}√5".format(int(s))))
+                foundSolution = True
+
+    if root % 6 == 0:
+        
+        r = root / 6
+
+    if root % 7 == 0:
+        isDivby7 = True
+        print("Div7 True")
+
+    if root % 8 == 0:
+        isDivby8 = True
+        print("Div8 True")
+
+    if root % 9 == 0:
+        isDivby9 = True
+        print("Div9 True")    
+    
+    if root % 10 == 0:
+        r = root / 5
+        s = sqrt(r)
+
+
+
+        
+        
