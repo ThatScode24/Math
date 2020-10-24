@@ -2,15 +2,13 @@ __author__ = "miha_focsa"
 
 from math import sqrt
 
-nums = [9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900, 961, 1024, 1089, 1156, 1225, 1296, 1396, 1444, 1521, 1600]
-primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
-
 def quadr(a, b, c):
     
     
     sqr_b = b * b
     delta = sqr_b - 4*a*c
     refr_b = -(b)
+
     double_a = 2 * a
     
     if delta > 0:
@@ -21,6 +19,7 @@ def quadr(a, b, c):
         
         fullExpr_v1 = float(upper_v1 / double_a)
         fullExpr_v2 = float(upper_v2 / double_a)
+
 
         return f"{fullExpr_v1} and {fullExpr_v2}"
 
@@ -37,9 +36,22 @@ def quadr(a, b, c):
 
 def spl(root):
     foundSolution = False
+    primes = [4, 6]
+    nums = []
+    start ,end = 0, 1000
+    for i in range(start, end + 1):
+        if (i**(.5)==  int(i**(.5))):
+            nums.append(i)
+    for num in range(start, end + 1):
+        if num > 1:
+            for i in range(2, num):
+                if (num % i) == 0:
+                    break
+            else:
+                primes.append(num)
     for num in nums:
         if root == num:
-            print(str(int(sqrt(num))))
+            return str(int(sqrt(num)))
             foundSolution = True
             break
     else:
@@ -56,6 +68,6 @@ def spl(root):
                     else:
                         if str(float(items[1])) == '0.0':
                             mod_s = int(s)
-                            print(str(f"{mod_s}√{prime}"))
+                            return str(f"{mod_s}√{prime}")
                             foundSolution = True
 
