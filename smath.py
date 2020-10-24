@@ -1,5 +1,7 @@
 __author__ = "miha_focsa"
 
+
+
 from math import sqrt
 
 def quadr(a, b, c):
