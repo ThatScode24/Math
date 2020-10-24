@@ -2,7 +2,8 @@ __author__ = "miha_focsa"
 
 from math import sqrt
 
-
+nums = [9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900, 961, 1024, 1089, 1156, 1225, 1296, 1396, 1444, 1521, 1600]
+primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
 
 def quadr(a, b, c):
     
@@ -35,111 +36,26 @@ def quadr(a, b, c):
 
 
 def spl(root):
-
     foundSolution = False
-
-    nums = [9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900, 961, 1024, 1089, 1156, 1225, 1296, 1396, 1444, 1521, 1600]
-    
     for num in nums:
         if root == num:
             print(str(int(sqrt(num))))
             foundSolution = True
             break
     else:
-        if root % 2 == 0:        
-            r = root / 2
-            s = sqrt(r)
-            items = str(s).split(".")
-            if foundSolution == True:
-                pass
-            else:    
-                if len(str(float(items[1]))) > 3:
+        for prime in primes:
+            if root % prime == 0:
+                r = root / prime
+                s = sqrt(r)
+                items = str(s).split(".")
+                if foundSolution == True:
                     pass
                 else:
-                    if str(float(items[1])) == '0.0':
-                        print(str("{}√2".format(int(s))))
-                        foundSolution = True       
-        if root % 3 == 0:        
-            r = root / 3
-            s = sqrt(r)
-            items = str(s).split(".")
-            if foundSolution == True:
-                pass
-            else:    
-                if len(str(float(items[1]))) > 3:
-                    pass
-                else:
-                    if str(float(items[1])) == '0.0':
-                        print(str("{}√3".format(int(s))))
-                        foundSolution = True
-    if root % 4 == 0:
-        r = root / 4
-        s = sqrt(r)
-        items = str(s).split(".")
-        if foundSolution == True:
-            pass
-        else:          
-            if len(str(float(items[1]))) > 3:
-                pass
-            else:
-                if str(float(items[1])) == '0.0':
-                    print(str("{}√4".format(int(s))))
-                    foundSolution = True
-    if root % 5 == 0:
-        r = root / 5
-        s = sqrt(r)
-        items = str(s).split(".")
-        if foundSolution == True:
-            pass
-        else:
-            if len(str(float(items[1]))) > 3:
-                pass
-            else:
-                if str(float(items[1])) == '0.0':
-                    print(str("{}√5".format(int(s))))
-                    foundSolution = True
-    if root % 6 == 0:
-        r = root / 6
-        s = sqrt(r)
-        items = str(s).split(".")
-        if foundSolution == True:
-            pass
-        else:
-            if len(str(float(items[1]))) > 3:
-                pass
-            else:
-                if str(float(items[1])) == '0.0':
-                    print(str("{}√6".format(int(s))))
-                    foundSolution = True
-    if root % 7 == 0: 
-        s = sqrt(r)
-        items = str(s).split(".")
-        if foundSolution == True:
-            pass
-        else:
-            if len(str(float(items[1]))) > 3:
-                pass
-            else:
-                if str(float(items[1])) == '0.0':
-                    print(str("{}√7".format(int(s))))
-                    foundSolution = True
-        if root % 11 == 0:
-            r = root / 11
-            s = sqrt(r)
-            items = str(s).split(".")
-            if foundSolution == True:
-                pass
-            else:
-                if len(str(float(items[1]))) > 3:
-                    pass
-                else:
-                    if str(float(items[1])) == '0.0':
-                        print(str("{}√11".format(int(s))))
-                        foundSolution = True
+                    if len(str(float(items[1]))) > 3:
+                        pass
+                    else:
+                        if str(float(items[1])) == '0.0':
+                            mod_s = int(s)
+                            print(str(f"{mod_s}√{prime}"))
+                            foundSolution = True
 
-
-
-
-
-        
-        
