@@ -75,8 +75,10 @@ def spl(*root):
                                             foundSolution = True
                                             mod_s = int(s)
                                             if mod_s == 1:
+                                                foundSolution = True
                                                 return str(f"√{prime}")
                                             else:
+                                                foundSolution = True
                                                 return str(f"{mod_s}√{prime}")
                                     else:
                                         if str(float(items[1])) == '0.0':
