@@ -1,4 +1,4 @@
-# Square Root Simplificator algorithm
+# Square Root Simplification algorithm
 
 
 
