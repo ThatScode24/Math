@@ -41,32 +41,30 @@ def spl(*root):
                                     pass
                                 else:
                                     if multp == None:
-                                        
                                         if str(float(items[1])) == '0.0':
                                             foundSolution = True
                                             mod_s = int(s)
-                                            if mod_s == 1:
-                                                foundSolution = True
-                                                if prime != 1:
-                                                    return str(f"√{prime}")
-                                                else:
-                                                    return str(f"1")
-                                            else:
-                                                foundSolution = True
+                                            if mod_s != 1:
                                                 if prime != 1:
                                                     return str(f"{mod_s}√{prime}")
                                                 else:
-                                                    return str(f"1")
+                                                    mod_s = int(s)
+                                                    return str(f"{mod_s}")
+                                            else:
+                                                return str(f"{prime}")
                                     else:
                                         if str(float(items[1])) == '0.0':
                                             foundSolution = True
-                                            if prime != 1:
-                                                mod_s = int(s) * int(multp)
-                                                return str(f"{mod_s}√{prime}")
+                                            mod_s = int(s) * int(multp)
+                                            if mod_s != 1:
+                                                if prime != 1:
+                                                    mod_s = int(s) * int(multp)
+                                                    return str(f"{mod_s}√{prime}")
+                                                else:
+                                                    mod_s = int(s) * int(multp)
+                                                    mods_s = mod_s * prime
+                                                    return str(f"{mods_s}") 
                                             else:
-                                                mod_s = int(s) * int(multp)
-                                                mods_s = mod_s * prime
-                                                return str(f"{mods_s}")
-
+                                                return str(f"{prime}")
                     else:
                         foundSolution = False
